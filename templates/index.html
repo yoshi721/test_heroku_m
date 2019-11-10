@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+        <h1>Welcome back to index ;)</h1>
+        <p>{{some_text}}</p>
+        <p>Aktuelles Jahr: {{current_year}}</p>
+        {% for city in cities %}
+                <p>{{city}}</p>
+        {% endfor %}
+        <br>
+        {% if cities %}
+                <p>Das Array cities existiert.</p>
+        {% else %}
+                <p>Kein Array vorhanden.</p>
+        {% endif %}
+        <a href="/portfolio">to portfolio</a>
+        <br> <br>
+        <a href="/about-me">to about</a>
+        <br>
+        <img src="/static/img/smartninja-logo.png">
+{% endblock content %}
